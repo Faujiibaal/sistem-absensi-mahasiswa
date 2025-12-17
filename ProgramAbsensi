@@ -1,0 +1,32 @@
+package main
+
+import "fmt"
+
+func main() {
+	var nama string
+	var inputPin int
+	var pinBenar bool
+	pin := 1234
+
+	fmt.Print("Masukkan nama mahasiswa: ")
+	fmt.Scanln(&nama)
+
+	for i := 1; i <= 3; {
+		i += 1
+		fmt.Println("Masukkan PIN:")
+		fmt.Scanln(&inputPin)
+
+		pinBenar = inputPin == pin
+
+		if pinBenar {
+			fmt.Println("---------")
+			fmt.Println("Absensi berhasil")
+			fmt.Println("Nama:", nama)
+			return
+		}
+		fmt.Println("PIN salah")
+		fmt.Println("Sisa percobaan:", 3-i+1)
+	}
+	fmt.Println("---------")
+	fmt.Println("Absensi ditolak, terlalu banyak percobaan")
+}
