@@ -1,0 +1,28 @@
+Kamus
+nama : string
+inputPin : integer
+pinBenar : boolean
+pin : integer = 1234
+
+Algoritma
+output("Masukkan nama mahasiswa: ")
+input(nama)
+
+for i = 1 to 3 do
+    output("Masukkan PIN: ")
+    input(inputPin)
+
+    pinBenar = inputPin == pin
+    
+    if pinBenar then
+       output("Absensi berhasil")
+       output("Nama:", nama)
+    else
+
+       output("PIN salah")
+       output("Sisa percobaan", 3-i)
+    endif
+endfor
+
+output("Absensi ditolak, terlalu banyak percobaan")
+Endprogram
